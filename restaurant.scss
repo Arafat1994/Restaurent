@@ -1,0 +1,502 @@
+
+$maingreencolor:#21bc0a;
+$graycolor:#b5b5b2 ;
+$secondgreencolor:#056e05;
+$padding10:10px;
+$blackcolor:black;
+$whiteco:white;
+$gld1:goldenrod;
+
+body
+{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+.maingreencolor
+{
+    color:$maingreencolor;
+}
+
+//header1
+
+.header1 
+{
+    border-bottom: 1px solid  $graycolor;
+   // padding: $padding10 ;
+}
+
+.header2
+{
+    display:none;
+    position:relative;
+    z-index:1;
+}
+
+.mainlink
+{
+    color:$graycolor;
+    text-decoration: none;
+    text-align: center;
+}
+
+.mainlink:hover
+{
+    color: $maingreencolor;
+    text-decoration: none;
+    
+}
+
+.fab
+{
+    margin-right:50px;
+}
+
+.fa-bars
+{
+    font-size:30px;
+}
+
+
+
+
+//header2
+
+.ulposition
+{
+    width: 80%;
+    position:relative;
+    left:5%;
+    .nav-item
+    {
+       margin-right:20px; 
+        
+    }
+}
+
+.mainlinkbutt
+{
+    color:$blackcolor; 
+    text-decoration: none;
+    
+}
+
+.mainlinkbutt:hover ,.mainlinkbutt:active , .actived
+{
+    background-color:#21bc0a;
+    border-bottom:3px solid $secondgreencolor;
+    color: white;
+}
+
+.dropdown1,.dropdown12
+{
+    position: relative;
+    
+}
+
+.dropdownmenu
+{
+    position:absolute;
+    width:200px;
+    text-align:center;
+    padding:10px;
+    display:none;
+    background-color:#f4f2f3;
+    box-shadow:5px 5px 12px $blackcolor ;
+    //box-shadow:5px 5px 10px $blackcolor;
+    //background-color:$whiteco;
+    //animation
+    animation-name:anidrop;
+    animation-duration:1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: backwards;
+ 
+}
+
+@keyframes anidrop
+{
+    from{left:100px; }
+    to{left:0px;}
+}
+
+.dropdownmenu2
+{
+    @extend .dropdownmenu ;
+    left:70px;
+    width: auto;
+    top:20px;
+}
+
+.dropdownmenu3
+{
+    @extend .dropdownmenu;
+    width:95%;
+    left:0;
+    height:auto;
+    padding:20px;
+    
+}
+.navitemdrop3
+{
+    width:90%;
+    margin:0;
+   
+}
+
+#searchbox
+{
+    position:absolute;
+    top:-100px;
+    display:none;
+    
+    
+}
+
+.searchback
+{
+    background-color:$maingreencolor;
+    width:100%;
+    
+}
+
+.searchclose
+{
+    position:absolute;
+    background-color:$blackcolor;
+    width:100%;
+    height:100%;
+    border-width:0;
+    color:$whiteco;
+}
+
+.barbutto
+{
+   @extend .mainlink;
+    margin:25px 25px 0 25px;
+    //color: black;
+}
+
+
+//header3
+
+.header3
+{
+   display:none;
+}
+
+.smallnav
+{
+    position: absolute;
+    top: 0px;
+    z-index: 1;
+    width:250px;
+    height:730px;
+    //height:100%;
+    padding:10px;
+    background-color:#f4f2f3;
+    box-shadow:5px 5px 12px $blackcolor ;
+    //border:1px solid green;
+    display:none;
+    overflow-y:scroll;
+    //position: relative;
+    animation-name:smallnavani;
+    animation-direction:normal;
+    animation-iteration-count: 1;
+    animation-duration:1s;
+    animation-fill-mode:forwards;
+    
+    .nav-item
+    {
+        margin-bottom:20px;
+    }
+}
+
+@keyframes smallnavani
+{
+    from{left:-200px;}
+    to{left:0px;}
+}
+
+.dropdownmenusm1,.dropdownmenusm3
+{
+    position: relative;
+    display: none;
+
+    
+}
+
+.dropdownmenusm2
+{
+    @extend .dropdownmenusm1 ;
+   
+}
+
+
+
+
+//carousel 
+
+.carouselback
+{
+    background-clip: border-box;
+    background-origin: border-box;
+    background-attachment:local;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    height:750px;
+    //position: relative;
+    padding:40px;
+    
+    .animacaro 
+    {
+        color:$whiteco;
+        background-color: rgba(0,0,0,.5);
+        //margin:60px;
+        padding:50px 25px 50px 25px;
+        border-left:3px solid $maingreencolor;
+        width: auto;
+        height:auto;
+        animation-name:divcarousel;
+        animation-duration:1s;
+        animation-direction:normal;
+        animation-iteration-count: 1;
+        animation-fill-mode: backwards;
+        
+    }
+    @keyframes divcarousel
+    {
+        from { top: 40% ;}
+        to { top:0 ;}
+    }
+}
+
+.carouselbutt
+{
+    @extend .mainlinkbutt:hover;
+    color:$whiteco;
+    padding:15px;
+    
+
+}
+
+.carouselbutt:hover
+{
+    color:$whiteco;
+    text-decoration: none;
+    background-color: $secondgreencolor;
+    border-bottom-color:$maingreencolor;
+    
+}
+
+
+
+//sec1 type of foods 
+
+.foodtypeback
+{
+    @extend .carouselback;
+    height:auto;
+    margin:20px;
+    //margin-right:20px;
+}
+.foodtypebutt
+{
+    @extend .carouselbutt;
+}
+
+
+
+
+//best recipe 
+
+ .bestrecipeback
+{
+    @extend .carouselback ;
+    height: 250px;
+    //margin-right:20px;
+    border-bottom: 3px solid $maingreencolor ;
+    
+}
+.bestreciplink
+{
+    @extend .mainlink ;
+    color:$blackcolor;
+    
+}
+.rating-stars
+{
+    color:$gld1;
+}
+
+
+
+//full background  and  menu 
+
+.fullback
+{
+    @extend .carouselback;
+    color: $whiteco;
+}
+
+.fullbutt
+{
+   @extend  .carouselbutt ;
+    margin:30px;
+}
+
+.media
+{
+    img
+    {
+        width:90px;
+        height:90px;
+    }
+}
+
+.mediabod
+{
+    line-height:8px;
+    p
+    {
+        font-size:10px;
+        margin:7px 0 7px 0;
+        //padding: 0;
+    }
+    .seccolor
+    {
+        color: $graycolor;
+    }
+}
+
+
+
+//subscribe 
+
+
+.fflex1
+{
+    border: 5px solid $maingreencolor ;
+    height:100%;
+    padding:10px;
+    p , h4
+    {
+        text-align: center;
+        
+    }
+   
+}
+
+.overflow
+{
+    overflow:hidden;
+    margin-bottom:20px;
+    //padding:10px;
+}
+
+.subscribeback
+{
+    @extend .carouselback;
+    height: 100%;
+    color: $whiteco;
+    p
+    {
+        font-size:12px;
+    }
+}
+.Subscripelink
+{
+    background-color:$maingreencolor;
+    color:$whiteco;
+    border:0px solid transparent;
+    border-left:5px solid $secondgreencolor;
+    padding:10px;
+    
+}
+
+.subtext
+{
+    height:50px;
+    font-size:12px;
+    padding-left:15px;
+    border:0px solid transparent;
+    border-left:2px solid $secondgreencolor;
+    border-left:5px solid$secondgreencolor;
+}
+
+
+
+// instagram photos 
+.instagramimg
+{
+    position: relative;
+    width:180px;
+    height:180px;
+    
+    overflow: hidden;
+    .img1 
+    {
+        height:100%;
+         width:100%;
+        position: absolute;
+        
+         
+    }
+    
+}
+
+.instagramimg:hover
+{
+    .img1
+    {
+        transform: scale(1.3,1.3);
+    }
+}
+
+.hovli
+{
+    
+    width:100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color:$whiteco;
+    text-decoration: none;
+    .insta{
+        display: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+    }
+   
+}
+
+.hovli:hover
+{
+    background-color:rgba(#21bc0a,.5);
+    color:$whiteco;
+    text-decoration: none;
+    
+    .insta
+    {
+        display: block;
+    }
+    
+
+}
+
+.toplink
+{
+    @extend .carouselbutt;
+    position: fixed;
+    bottom:12%;
+    right:5%;
+    border-radius: 50%;
+    display: none;
+}
+
+/*# sourceMappingURL=restaurant.scss.map */
+
